@@ -15,11 +15,9 @@ public class Main {
         UserMenu.showMenu();
         while (key){
             try {
-
                 int numberMenu = inputNumber("Введите номер команды: ");
-                System.out.println(numberMenu);
                 UserMenu.perform(numberMenu);
-            }catch (Exception e){
+            } catch (Exception e){
                 System.out.println("Программа завершена");
                 key = false;
             }

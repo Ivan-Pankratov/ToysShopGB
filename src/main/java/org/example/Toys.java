@@ -1,18 +1,20 @@
 package org.example;
-import java.util.PriorityQueue;
+
+
 
 public class Toys implements Comparable<Toys>{
-    int count = 0;
+    private static Integer count=1;
     protected int id;
     protected String name;
     private Integer percentageOfLoss;
 
     public Toys(String name, Integer percentageOfLoss) {
-        count ++;
         this.id = count;
         this.name = name;
         this.percentageOfLoss = percentageOfLoss;
+        count++;
     }
+
 
     @Override
     public int compareTo(Toys o) {
@@ -21,27 +23,7 @@ public class Toys implements Comparable<Toys>{
 
     @Override
     public String toString() {
-        return "Toys{" +
-                "id = " + id +
-                ", Название: '" + name + '\'' +
-                ", % выпадения = " + percentageOfLoss +
-                '}';
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        return STR."Toy {id = \{id}, Название: '\{name}\{'\''}, % выпадения = \{percentageOfLoss}\{'}'}";
     }
 
     public int getPercentageOfLoss() {

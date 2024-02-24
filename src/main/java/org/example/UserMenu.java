@@ -3,6 +3,7 @@ package org.example;
 import java.util.*;
 
 import static org.example.MethodToysQueue.*;
+import static org.example.MethodsFile.deletedFile;
 import static org.example.MethodsFile.printFile;
 import static org.example.OtherFunctions.inputNumber;
 
@@ -24,8 +25,9 @@ public class UserMenu {
         userMenu.add(3, "Изменить % выпадения приза");
         userMenu.add(4, "Разыграть приз");
         userMenu.add(5, "Вывод файла с выданными призами");
-        userMenu.add(6, "Выход из программы");
-        userMenu.add(7, "Печать меню");
+        userMenu.add(6, "Удаление файла с данными о выданных призах");
+        userMenu.add(7, "Выход из программы");
+        userMenu.add(8, "Печать меню");
     }
 
 
@@ -63,16 +65,16 @@ public class UserMenu {
                 printFile();
                 break;
             case 7:
-                throw new RuntimeException("Вы решили прервать программу ");
+                deletedFile();
+                break;
             case 8:
+                throw new RuntimeException("Вы решили прервать программу ");
+            case 9:
                 showMenu();
                 break;
             default:
                 System.out.println("Нет команды с таким номером. " +
                         "Пожалуйста, повторите ввод ");
-
-
-
         }
     }
 }

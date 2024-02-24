@@ -16,10 +16,10 @@ public class OtherFunctions {
             Scanner scanner = new Scanner(System.in);
             System.out.println(message);
             String string = scanner.nextLine();
-            if (string.isEmpty()) System.out.println("Ну что же так? \n Вы ввели пустую строку");
+            if (string.isEmpty()) System.out.println("  Ну, что же так? \nВы ввели пустую строку");
             else if (isParsable(string)) {
                 number = Integer.parseInt(string);
-            }
+            } else System.out.println("Не корректные данные. Принято значение по умолчанию ");
         } catch (Exception e) {
             System.out.println("Ввод числа не удался");
             throw new RuntimeException(e);
@@ -30,10 +30,8 @@ public class OtherFunctions {
     /**
      * Метод ввода строки из консоли
      */
-
     public static String inputString(String message){
-
-        String string = "";
+        String string;
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.println(message);
@@ -56,5 +54,4 @@ public class OtherFunctions {
             return false;
         }
     }
-
 }
